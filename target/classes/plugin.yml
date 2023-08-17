@@ -1,0 +1,6 @@
+name: MyfirstPlugin
+version: '1.0-SNAPSHOT'
+main: com.swittch.myfirstplugin.Main
+api-version: '1.20'
+authors: [Swittch]
+description: Cool test plugin
