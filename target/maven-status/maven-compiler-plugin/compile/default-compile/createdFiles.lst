@@ -1,3 +1,4 @@
 com\swittch\myfirstplugin\HealCommand.class
 com\swittch\myfirstplugin\Main.class
 com\swittch\myfirstplugin\TestCommand.class
+com\swittch\myfirstplugin\ConfigCommand.class
