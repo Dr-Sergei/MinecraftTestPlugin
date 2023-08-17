@@ -13,6 +13,8 @@ public final class Main extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
 
+        getCommand("permission").setExecutor(new PermissionCommand());
+
         getConfig().options().copyDefaults();
         saveDefaultConfig();
 

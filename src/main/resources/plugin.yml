@@ -8,3 +8,4 @@ commands:
   heal:
   test:
   config:
+  permission:
