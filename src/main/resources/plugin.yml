@@ -4,3 +4,6 @@ main: com.swittch.myfirstplugin.Main
 api-version: '1.20'
 authors: [Swittch]
 description: Cool test plugin
+commands:
+  heal:
+
