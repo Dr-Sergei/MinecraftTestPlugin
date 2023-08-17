@@ -15,6 +15,10 @@ public class HealCommand implements CommandExecutor {
             Player player = (Player) sender;
             player.sendMessage(ChatColor.GOLD + "Paul! Gucke. alle Herzen wurden wieder aufgefüllt!");
             player.setHealth(19.5);
+
+
+        } else {
+
         }
 
         return false;

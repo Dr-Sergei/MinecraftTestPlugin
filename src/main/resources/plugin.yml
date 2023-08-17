@@ -6,4 +6,5 @@ authors: [Swittch]
 description: Cool test plugin
 commands:
   heal:
+  test:
 
