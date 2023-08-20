@@ -13,8 +13,12 @@ import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.player.PlayerEggThrowEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ArmorMeta;
+import org.bukkit.inventory.meta.BookMeta;
+import org.bukkit.inventory.meta.CompassMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -31,8 +35,19 @@ public final class Main extends JavaPlugin implements Listener {
 //        itemStack.setItemMeta(meta);
 //
 //        Block block = Bukkit.getWorld("world").getBlockAt(348,78,-181);
-//        block.getType().equals(Material.DIAMOND_SWORD);
+//        block.getType().equals(Material.DIAMOND_BLOCK);
 
+//        Bukkit.getWorld("world").getChunkAt(1,1,1);
+
+//        ItemStack itemStack = new ItemStack(Material.BOOK);
+//        BookMeta bookMeta = (BookMeta) itemStack.getItemMeta();
+//        bookMeta.addPage();
+
+//        ItemStack itemStack = new ItemStack(Material.COMPASS);
+//        CompassMeta compassMeta = (CompassMeta) itemStack.getItemMeta();
+//        compassMeta.getLodestone();
+
+        Bukkit.getPluginManager().registerEvents(this, this);
 
 
 
@@ -47,6 +62,26 @@ public final class Main extends JavaPlugin implements Listener {
 
 
     }
+    @EventHandler
+    public void onJoin(PlayerJoinEvent event){
+        ItemStack pickaxe = new ItemStack(Material.DIAMOND_PICKAXE);
+        ItemMeta pickAxeMeta = (ItemMeta) pickaxe.getItemMeta();
+        pickAxeMeta.addEnchant(Enchantment.LUCK,4,true);
+        pickaxe.setItemMeta(pickAxeMeta);
+
+        event.getPlayer().getInventory().addItem(pickaxe);
+
+        ItemStack sword = new ItemStack(Material.IRON_SWORD);
+        ItemMeta swordItemMeta =(ItemMeta) sword.getItemMeta();
+        swordItemMeta.addEnchant(Enchantment.MENDING,4 ,true);
+        sword.setItemMeta(swordItemMeta);
+
+        event.getPlayer().getInventory().addItem(sword);
+
+    }
+
+
+
 
 //    @EventHandler
 //    public void onEntitySpawn(CreatureSpawnEvent e){
